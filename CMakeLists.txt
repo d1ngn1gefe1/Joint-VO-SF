@@ -66,6 +66,6 @@ TARGET_LINK_LIBRARIES(VO-SF-ImageSeq 	vo_sf_lib)
 # Set optimized building:
 IF(CMAKE_COMPILER_IS_GNUCXX)
 	SET(CMAKE_BUILD_TYPE "Release") #I'm not sure if this does anything
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mtune=native -mavx")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mtune=native -mavx -std=c++14")
 ENDIF(CMAKE_COMPILER_IS_GNUCXX)
 
