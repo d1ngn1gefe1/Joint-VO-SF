@@ -245,8 +245,8 @@ void VO_SF::saveFlowAndSegmToFile(string files_dir)
             rmx.at<float>(v,u) = motionfield[1](rows-1-v,u);
             rmy.at<float>(v,u) = motionfield[2](rows-1-v,u);
             rmz.at<float>(v,u) = motionfield[0](rows-1-v,u);
-			segm_col.at<cv::Vec3b>(v,u) = cv::Vec3b(255.f*backg_image[2](rows-1-v,u), 255.f*backg_image[1](rows-1-v,u), 255.f*backg_image[0](rows-1-v,u));
-			kmeans.at<cv::Vec3b>(v,u) = cv::Vec3b(255.f* labels_image[2](rows-1-v,u), 255.f*labels_image[1](rows-1-v,u), 255.f*labels_image[0](rows-1-v,u));
+//			segm_col.at<cv::Vec3b>(v,u) = cv::Vec3b(255.f*backg_image[2](rows-1-v,u), 255.f*backg_image[1](rows-1-v,u), 255.f*backg_image[0](rows-1-v,u));
+//			kmeans.at<cv::Vec3b>(v,u) = cv::Vec3b(255.f* labels_image[2](rows-1-v,u), 255.f*labels_image[1](rows-1-v,u), 255.f*labels_image[0](rows-1-v,u));
         }
 
     SFlow << "SFx" << rmx;
@@ -256,15 +256,15 @@ void VO_SF::saveFlowAndSegmToFile(string files_dir)
 	cout << endl << "Scene flow saved in " << name;
 
 	//Save segmentations
-	sprintf(aux, "Segmentation_backg_color.png");
-    name = files_dir + aux;
-	cv::imwrite(name, segm_col);
-	cout << endl << "Segmentation (color) saved in " << name;
+//	sprintf(aux, "Segmentation_backg_color.png");
+//    name = files_dir + aux;
+//	cv::imwrite(name, segm_col);
+//	cout << endl << "Segmentation (color) saved in " << name;
 
-	sprintf(aux, "Segmentation_kmeans.png");
-    name = files_dir + aux;
-	cv::imwrite(name, kmeans);
-	cout << endl << "Segmentation (kmeans) saved in " << name;
+//	sprintf(aux, "Segmentation_kmeans.png");
+//    name = files_dir + aux;
+//	cv::imwrite(name, kmeans);
+//	cout << endl << "Segmentation (kmeans) saved in " << name;
 }
 
 

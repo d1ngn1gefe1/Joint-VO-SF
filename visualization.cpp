@@ -518,7 +518,7 @@ void VO_SF::createImagesOfSegmentations()
 					float aux_var;
 					if (b_segm[l] < 0.333) 		aux_var = 0.f;
 					else if (b_segm[l] > 0.667)	aux_var = 1.f;
-					else							aux_var = std::min(1.f, 3.f*(b_segm[l] - 0.333f));
+					else						aux_var = std::min(1.f, 3.f*(b_segm[l] - 0.333f));
 					backg_image[0](v,u) += aux_var*lab;
 					backg_image[2](v,u) += (1.f - aux_var)*lab;
                 }
